@@ -1,0 +1,85 @@
+<head>
+    <title>Создание мобильных приложений для начинающих</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="pictures/favicon.ico" type="image/x-icon">
+</head>
+<body bgcolor=E6FADB>
+
+
+        <div class = "logocontainer">
+            
+            <a href="index.html"> <img src = "pictures/logo site.png"></a>
+            <p> Создание мобильных приложений для начинающих </p>
+            <div class = "maintext">
+
+            </div>
+        </div>
+
+            <div class = "navigator">
+            <h3> Навигатор по сайту </h3>
+            <p> <br>
+                <a href="pages/page1.html">Мобильные Приложения</a> <br>
+                <a href="pages/page2.html">Языки Программирования</a> <br>
+                <a href="pages/page3.html">Основы Программирования</a> <br>
+                <a href="pages/page4.html">Пошаговое Руководство <br> по созданию первого приложения</a> <br>
+            </p>
+            </div>
+
+            <style>
+                .navigator {
+                    height: 100%;
+                    width: 15vw;
+                    background-color: rgb(151, 187, 112);
+                    margin-left:1vw ; margin-top:1.64vw;
+                    border-radius: 20px;
+                    display: grid;
+                    grid-template-columns: 2.5% 95% 2.5%; 
+                    grid-template-rows:  2% 98% ;
+                    grid-template-areas: ". TITLE ."
+                    ". TEXT .";
+                }
+                .navigator h3 { text-align: center; width: 80%; height: 40% ; grid-area: TITLE; align-self: top; text-indent: 30px; font-size:20px; color:rgb(234, 238, 234)}
+                .navigator p { text-align: center; width: 80%; height: 40% ; grid-area: TEXT; align-self: top; text-indent: 30px; font-size:20px;}
+                
+                .logocontainer {
+                    position: relative;
+                    width: 60vw;
+                    height: 10vh;
+                    background-color: rgb(104, 151, 111);
+                    margin-top: auto 100; margin: auto ;
+                    border-radius: 20px;
+                    display: grid;
+                    grid-template-columns: 12.5% auto ; 
+                    grid-template-rows: 100px ;
+                    grid-template-areas: "ICON TEXT";
+                }
+                .logocontainer img { height: 5vw; grid-area: ICON}
+                .logocontainer p { text-align: center; width: 40vw; height: 5vh ; grid-area: TEXT;  font-weight:900; color:rgb(234, 238, 234);font-size: 150%;}
+                
+                .maintext {
+                    position: absolute;
+                    top: 7vw;
+                    height: 800px;
+                    width: 100%;
+                    background-color: rgb(104, 151, 111);
+                    margin: auto ;  margin-top: auto 100;
+                    border-radius: 20px;
+                    display: grid;
+                    grid-template-columns: 5% 90% 5%; 
+                    grid-template-rows:  100% ;
+                    grid-template-areas: ". TEXT .";
+                }
+                .maintext p { text-align: center; width: 80%; height: 40% ; grid-area: TEXT; align-self: center; text-indent: 30px; font-size:50px;}
+
+
+            </style>
+    <main>
+        
+    </main>
+
+    <footer>
+       
+    </footer>
+
+    <!-- <script src="script.js"></script> Подключение javascript -->
+</body>
