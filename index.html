@@ -6,76 +6,76 @@
     <title>Создание мобильных приложений</title>
     <link rel="icon" href="pictures/favicon.ico" type="image/x-icon">
     <style>
-        /* Стили для всего документа */
+        
         body {
-            margin: 0; /* Убираем стандартные отступы body */
-            font-family: sans-serif; /* Для лучшей читаемости */
-            display: grid; /* Используем Grid для основного макета */
-            grid-template-columns: 15vw 1fr; /* Навигатор занимает 15vw, остальное - контент */
-            grid-template-rows: 10vh 1fr; /* Лого занимает 10vh, основной текст - остальное */
+            margin: 0; 
+            font-family: sans-serif; 
+            display: grid; 
+            grid-template-columns: 15vw 1fr; 
+            grid-template-rows: 10vh 1fr; 
             grid-template-areas:
                 "NAV HEADER"
-                "NAV MAIN"; /* Определяем области */
-            min-height: 100vh; /* Чтобы футер (если будет) прижимался к низу */
-            background-color: #f0f0f0; /* Цвет фона для наглядности */
+                "NAV MAIN"; 
+            min-height: 100vh; 
+            background-color: #f0f0f0; 
         }
 
-        /* Навигатор */
+        
         .navigator {
-            grid-area: NAV; /* Привязываем к области NAV */
+            grid-area: NAV; 
             background-color: rgb(151, 187, 112);
             border-radius: 20px;
-            margin: 1vw; /* Отступ от края */
-            padding: 10px; /* Внутренние отступы */
-            /* overflow: auto; - Теперь не нужен, т.к. родитель (body) имеет min-height и будет адаптироваться */
+            margin: 1vw; 
+            padding: 10px; 
+            
             display: grid;
-            grid-template-rows: auto 1fr; /* Авто высота для заголовка, остальное для ссылок */
+            grid-template-rows: auto 1fr; 
         }
 
         .navigator h3 {
             text-align: center;
             font-size: 20px;
             color: rgb(234, 238, 234);
-            margin: 0; /* Убираем стандартные отступы */
-            padding: 5px 0; /* Небольшие отступы по вертикали */
+            margin: 0; 
+            padding: 5px 0; 
         }
 
         .navigator p {
-            text-align: left; /* Лучше выравнивать текст ссылок по левому краю */
-            font-size: 1.1vw; /* Адаптивный размер шрифта */
+            text-align: left; 
+            font-size: 1.1vw; 
             margin: 0;
             padding: 0;
-            display: flex; /* Используем flex для вертикального выравнивания ссылок */
-            flex-direction: column; /* Столбцом */
-            justify-content: top; /* Центрируем по вертикали */
-            gap: 15px; /* Расстояние между ссылками */
-            overflow-y: auto; /* Если ссылок очень много, будет прокрутка */
+            display: flex; 
+            flex-direction: column; 
+            justify-content: top; 
+            gap: 15px; 
+            overflow-y: auto; 
         }
 
         .navigator a {
             color: rgb(234, 238, 234);
-            text-decoration: none; /* Убираем подчеркивание */
-            padding: 5px 0; /* Небольшие отступы */
-            display: block; /* Чтобы ссылка занимала всю ширину */
-            /* text-indent: 30px; - Лучше использовать padding-left */
-            padding-left: 30px; /* Отступ слева */
+            text-decoration: none; 
+            padding: 5px 0; 
+            display: block; 
+            
+            padding-left: 30px; 
         }
 
         .navigator a:hover {
-            text-decoration: underline; /* Подчеркивание при наведении */
+            text-decoration: underline; 
         }
 
-        /* Контейнер логотипа и заголовка */
+        
         .logocontainer {
-            grid-area: HEADER; /* Привязываем к области HEADER */
+            grid-area: HEADER; 
             background-color: rgb(104, 151, 111);
             border-radius: 20px;
             margin: 1vw;
-            display: flex; /* Используем flex для расположения иконки и текста */
-            align-items: center; /* Выравниваем по вертикали */
-            justify-content: space-between; /* Разносим иконку и текст */
-            padding: 0 20px; /* Отступы слева/справа */
-            height: 100%; /* Занимает всю высоту строки HEADER */
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 0 20px; 
+            height: 100%; 
         }
 
         .logocontainer a {
@@ -86,39 +86,39 @@
         }
 
         .logocontainer img {
-            height: 6vw; /* Адаптивная высота */
-            max-height: 80px; /* Максимальная высота */
-            margin-right: 5px; /* Отступ справа от картинки */
+            height: 6vw; 
+            max-height: 80px; 
+            margin-right: 5px; 
         }
 
         .logocontainer p {
             font-weight: 900;
             color: rgb(234, 238, 234);
-            font-size: 1.8vw; /* Адаптивный размер */
+            font-size: 1.8vw; 
             margin:0;
-            max-width: 100%; /* Ограничиваем ширину текста */
+            max-width: 100%; 
         }
 
-        /* Основной контент */
+        
         .maintext {
-            grid-area: MAIN; /* Привязываем к области MAIN */
+            grid-area: MAIN; 
             background-color: rgb(151, 187, 112);
             border-radius: 20px;
             margin: 1vw;
-            padding: 20px; /* Внутренние отступы */
-            display: grid; /* Если нужен внутренний grid */
-            grid-template-columns: 5% 90% 5%; /* Пример внутреннего grid */
-            grid-template-rows: auto; /* Высота определяется содержимым */
-            overflow-y: auto; /* Прокрутка, если содержимое очень длинное */
-            box-sizing: border-box; /* Важно для padding + width */
+            padding: 20px; 
+            display: grid; 
+            grid-template-columns: 5% 90% 5%; 
+            grid-template-rows: auto; 
+            overflow-y: auto; 
+            box-sizing: border-box; 
         }
 
         .maintext p {
-            grid-column: 2; /* Размещаем по центру */
+            grid-column: 2; 
             text-align: justify;
-            width: 100%; /* Занимает всю доступную ширину в колонке */
-            /* height: 40%; - Убираем жесткую высоту */
-            font-size: 1.5vw; /* Адаптивный размер */
+            width: 100%; 
+            
+            font-size: 1.5vw; 
             margin: 0;
             color: rgb(234, 238, 234);
         }
@@ -128,14 +128,14 @@
         }
 
         .maintext a:hover {
-            text-decoration: underline; /* Подчеркивание при наведении */
+            text-decoration: underline; 
         }
 
-        /* Адаптивность для маленьких экранов (опционально) */
+        
         @media (max-width: 768px) {
             body {
-                grid-template-columns: 1fr; /* Навигатор и контент в одну колонку */
-                grid-template-rows: auto auto 1fr; /* Высота навигатора, лого, основной контент */
+                grid-template-columns: 1fr; 
+                grid-template-rows: auto auto 1fr; 
                 grid-template-areas:
                     "NAV"
                     "HEADER"
@@ -143,16 +143,16 @@
             }
 
             .navigator {
-                height: auto; /* Высота по содержимому */
-                margin-bottom: 0; /* Убираем нижний отступ */
+                height: auto; 
+                margin-bottom: 0; 
             }
 
             .navigator p {
-                font-size: 3vw; /* Увеличиваем шрифт на мобильных */
+                font-size: 3vw; 
             }
 
             .logocontainer {
-                flex-direction: column; /* Лого и текст друг под другом */
+                flex-direction: column; 
                 height: auto;
                 padding-bottom: 15px;
                 margin-bottom: 20px;
@@ -171,7 +171,7 @@
             }
 
             .maintext {
-                height: auto; /* Высота по содержимому */
+                height: auto; 
             }
         }
     </style>
@@ -190,7 +190,7 @@
 
     <div class="logocontainer">
         <a href="index.html">
-            <img src="pictures/logo site.png" alt="Логотип сайта"> <!-- Добавьте alt атрибут -->
+            <img src="pictures/logo site.png" alt="Логотип сайта"> 
         </a>
         <p>Создание мобильных приложений для начинающих</p>
     </div>
@@ -202,7 +202,7 @@
             <a href="pages/page2.html">Языки Программирования</a><br><br>
             <a href="pages/page3.html">Основы Программирования</a><br><br>
             <a href="pages/page4.html">Пошаговое Руководство<br> по созданию первого приложения</a><br><br>
-.</p>
+</p>
     </div>
 
 </body>

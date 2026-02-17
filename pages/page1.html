@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мобильные приложения</title>
+    <link rel="icon" href="../pictures/favicon.ico" type="image/x-icon">
+    <style>
+        
+        body {
+            margin: 0; 
+            font-family: sans-serif; 
+            display: grid; 
+            grid-template-columns: 15vw 1fr; 
+            grid-template-rows: 10vh 1fr; 
+            grid-template-areas:
+                "NAV HEADER"
+                "NAV MAIN"; 
+            min-height: 100vh; 
+            background-color: #f0f0f0; 
+        }
+
+        
+        .navigator {
+            grid-area: NAV; 
+            background-color: rgb(151, 187, 112);
+            border-radius: 20px;
+            margin: 1vw; 
+            padding: 10px; 
+            
+            display: grid;
+            grid-template-rows: auto 1fr; 
+        }
+
+        .navigator h3 {
+            text-align: center;
+            font-size: 20px;
+            color: rgb(234, 238, 234);
+            margin: 0; 
+            padding: 5px 0; 
+        }
+
+        .navigator p {
+            text-align: left; 
+            font-size: 1.1vw; 
+            margin: 0;
+            padding: 0;
+            display: flex; 
+            flex-direction: column; 
+            justify-content: top; 
+            gap: 15px; 
+            overflow-y: auto; 
+        }
+
+        .navigator a {
+            color: rgb(234, 238, 234);
+            text-decoration: none; 
+            padding: 5px 0; 
+            display: block; 
+            
+            padding-left: 30px; 
+        }
+
+        .navigator a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .logocontainer {
+            grid-area: HEADER; 
+            background-color: rgb(104, 151, 111);
+            border-radius: 20px;
+            margin: 1vw;
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 0 20px; 
+            height: 100%; 
+        }
+
+        .logocontainer a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logocontainer img {
+            height: 6vw; 
+            max-height: 80px; 
+            margin-right: 5px; 
+        }
+
+        .logocontainer p {
+            font-weight: 900;
+            color: rgb(234, 238, 234);
+            font-size: 1.8vw; 
+            margin:0;
+            max-width: 100%; 
+        }
+
+        
+        .maintext {
+            grid-area: MAIN; 
+            background-color: rgb(151, 187, 112);
+            border-radius: 20px;
+            margin: 1vw;
+            padding: 20px; 
+            display: grid; 
+            grid-template-columns: 5% 90% 5%; 
+            grid-template-rows: auto; 
+            overflow-y: auto; 
+            box-sizing: border-box; 
+        }
+
+        .maintext p {
+            grid-column: 2; 
+            text-align: justify;
+            width: 100%; 
+            
+            font-size: 1.5vw; 
+            margin: 0;
+            color: rgb(234, 238, 234);
+        }
+
+        .maintext a {
+            text-decoration: none
+        }
+
+        .maintext a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        @media (max-width: 768px) {
+            body {
+                grid-template-columns: 1fr; 
+                grid-template-rows: auto auto 1fr; 
+                grid-template-areas:
+                    "NAV"
+                    "HEADER"
+                    "MAIN";
+            }
+
+            .navigator {
+                height: auto; 
+                margin-bottom: 0; 
+            }
+
+            .navigator p {
+                font-size: 3vw; 
+            }
+
+            .logocontainer {
+                flex-direction: column; 
+                height: auto;
+                padding-bottom: 15px;
+                margin-bottom: 20px;
+            }
+
+            .logocontainer img {
+                height: 12vw;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .logocontainer p {
+                font-size: 4vw;
+                text-align: center;
+                width: 90%;
+            }
+
+            .maintext {
+                height: auto; 
+            }
+             .maintext p {
+                 font-size: 4vw;
+             }
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navigator">
+        <h3>Навигатор по сайту</h3>
+        <p>
+            <a href="../index.html">Главная</a>
+            <a href="page1.html">Мобильные Приложения</a>
+            <a href="page2.html">Языки Программирования</a>
+            <a href="page3.html">Основы Программирования</a>
+            <a href="page4.html">Пошаговое Руководство<br> по созданию первого приложения</a>
+        </p>
+    </div>
+
+    <div class="logocontainer">
+        <a href="../index.html">
+            <img src="../pictures/logo site.png" alt="Логотип сайта"> 
+        </a>
+        <p>Мобильные приложения</p>
+    </div>
+
+    <div class="maintext">
+        <p>Мобильное приложение — это <font color=green>специализированная программа</font>, разработанная для установки и работы на мобильных устройствах (смартфонах, планшетах). Сами приложения состоят из кода – особых слов и символов понятных для человека, отличающихся в зависимости от языка, на котором написано приложение. В основном они делятся на <font color=green>предустановленные</font> (установленные на телефоне с первого запуска и чаще всего не поддающиеся удалению привычным способом) и <font color=green>скачиваемые</font> из сети. <br><br>
+В структуру предустановленных мы углубляться не будем – их разработка и модификация совсем другой навык, который в основном дают уже в ВУЗах при поступлении на системного программиста. На самом деле эти навыки менее востребованы в современном мире, так как многие операционные системы уже готовы. <br><br>
+<font color=green>На скачиваемых из сети остановимся поподробнее.</font> На мобильных устройствах мы скачиваем приложения из разного рода интернет-ресурсов. Наиболее популярными и простыми являются <a href="https://play.google.com/store/apps?hl=ru"><font color=purple>Play Market для Android</font></a> и <a href="https://www.apple.com/app-store/"><font color=purple>App Store для Apple</font></a>, но, чтобы добавить туда свои приложения нужно заплатить: В Play Market единоразовый взнос 25$ (Как я понял: заплатили 1 раз и можем выкладывать сколько угодно приложений), в App Store необходима годовая подписка за 99$.<br><br>
+Но чаще всего начинающие пользуются бесплатным сайтом <a href="https://github.com"><font color=purple>GitHub</font></a> – очень полезным сайтом, сочетающим в себе множество функций, одна из которых возможность выложить код своего проекта. <br><br>
+На GitHub в целом стоит остановиться чуть подробнее, так как сайт имеет множество готовых репозиториев (По сути, страница на которой выложен код приложений) с открытым кодом (Открытый — значит незашифрованный, понятный для человека). <font color=green> Для начинающих это целая кладезь полезной информации ведь на примере такого кода можно узнавать способы решения разных задач.</font> Также GitHub поддерживает совместную работу над одним репозиторием, предоставляет 1 бесплатный домен для вашего сайта и много чего ещё полезного. <br><br>
+Также приложения делятся на онлайн и офлайн приложения, то есть работающие с подключением к интернету и без него соответственно. При создании онлайн приложений нам придётся столкнуться с созданием сервера – по сути компьютера исполняющего все запросы клиента (ну то есть пользователя нашего приложения). <font color=green>
+Но в этом гайде я затрону только онлайн приложения, которые не будут зависеть от подключения к интернету и будут работать только на вашем устройстве. </font><br><br>
+ 
+</p>
+    </div>
+
+</body>
+</html>
